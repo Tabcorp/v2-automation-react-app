@@ -1,0 +1,25 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:wdio/recommended", "prettier", "prettier/react"],
+  "plugins": [
+    "react",
+    "wdio"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "describe": "readonly",
+    "it": "readonly",
+    "context": "readonly",
+    "beforeEach": "readonly",
+    "cy": "readonly"
+  }
+}
