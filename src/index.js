@@ -50,7 +50,7 @@ class App extends React.Component {
   renderList = ({history}) => {
     return (
       <>
-        <h1>Contacts</h1>
+        <h1 data-id="contacts-header">Contacts</h1>
         {this.renderErrorState()}
         <ContactList
           items={this.state.contacts}
