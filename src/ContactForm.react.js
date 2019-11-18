@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FIELDS = ['name', 'phone', 'street', 'city'];
+const FIELDS = ['name', 'gender', 'phone', 'street', 'city'];
 
 export class ContactForm extends React.Component {
   state = {
@@ -16,6 +16,7 @@ export class ContactForm extends React.Component {
         ref={this.setFormRef}
       >
         {this.renderInput('name', 'Name', contact.name)}
+        {this.renderGenderSelect('gender', 'Gender', contact.gender)}
         {this.renderInput('phone', 'Phone', contact.phone)}
         {this.renderInput('street', 'Street', contact.street)}
         {this.renderInput('city', 'City', contact.city)}
@@ -37,6 +38,19 @@ export class ContactForm extends React.Component {
       <div className="ContactFormField">
         <label>{name}</label>
         <input name={name} type="text" defaultValue={value} />
+      </div>
+    );
+  };
+
+ renderGenderSelect = (name, label, value) => {
+    return (
+      <div className="ContactFormField">
+        <label>{name}</label>
+          <select name={name} data-id={name} value="Please select" onChange={this.handleChange}>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
       </div>
     );
   };

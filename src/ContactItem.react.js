@@ -4,16 +4,21 @@ export class ContactItem extends React.Component {
   render() {
     const {item} = this.props;
     return (
-      <div className="ContactItem">
+      <div className="ContactItem" data-id="contact-item" name="contact-item">
         <p>
-          <strong>{item.name}</strong>
+          Name: <strong>{item.name}</strong>
         </p>
-        <p>{item.phone}</p>
         <p>
-          {item.street}, {item.city}
+          Gender: {item.gender}
+        </p>
+        <p>Phone: {item.phone}</p>
+        <p>
+          Address: {item.street}, {item.city}
         </p>
         <button
           className="ContactItemEdit"
+          data-id="edit"
+          name="edit"
           key="edit"
           onClick={this.onEditClick}
         >
@@ -21,6 +26,8 @@ export class ContactItem extends React.Component {
         </button>
         <button
           className="ContactItemDelete"
+          data-id="delete"
+          name="delete"
           key="delete"
           onClick={this.onDeleteClick}
         >

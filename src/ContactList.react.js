@@ -47,8 +47,8 @@ export class ContactList extends React.Component {
     return (
       <div className="ContactList">
         <div className="ContactListSearch" key="search">
-          <input onChange={this.onSearchChange} placeholder="Search" />
-          <button className="ContactListAdd" onClick={this.props.onAddClick}>
+          <input onChange={this.onSearchChange} data-id="search" placeholder="Search" />
+          <button className="ContactListAdd" data-id="add" onClick={this.props.onAddClick}>
             Add
           </button>
         </div>
