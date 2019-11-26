@@ -6,6 +6,10 @@ html, body, #root {
   background: #f6f7ee;
 }
 
+.hidden-div {
+    visibility: hidden;
+}
+
 .App {
   font-family: Helvetica, Arial, sans-serif;
   max-width: 400px;
