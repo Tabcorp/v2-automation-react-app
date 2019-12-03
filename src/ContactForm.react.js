@@ -22,8 +22,8 @@ export class ContactForm extends React.Component {
         {this.renderInput('city', 'City', contact.city)}
         {this.renderError()}
         <div className="ContactFormButtons">
-          <button type="submit">Save</button>
-          <button type="button" onClick={this.onCancel}>Cancel</button>
+          <button type="submit" data-id="submit">Save</button>
+          <button type="button" data-id="cancel" onClick={this.onCancel}>Cancel</button>
         </div>
       </form>
     );
@@ -37,7 +37,7 @@ export class ContactForm extends React.Component {
     return (
       <div className="ContactFormField">
         <label>{name}</label>
-        <input name={name} type="text" defaultValue={value} />
+        <input data-id={name} name={name} type="text" defaultValue={value} />
       </div>
     );
   };

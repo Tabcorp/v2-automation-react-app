@@ -10,6 +10,7 @@ export class ContactList extends React.Component {
 
   render() {
     const {query} = this.state;
+    console.log({query})
     let lowerCaseQuery;
     if (query != null) {
       lowerCaseQuery = query.toLowerCase();
