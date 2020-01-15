@@ -5,15 +5,17 @@ export class ContactItem extends React.Component {
     const {item} = this.props;
     return (
       <div className="ContactItem" data-id="contact-item" name="contact-item">
-        <p>
-          Name: <strong>{item.name}</strong>
+        <p data-id="full-name-label">
+          Name: <strong data-id="content"><div class="inner-content" data-id="inner-content">{item.name}</div></strong>
         </p>
         <p>
-          Gender: {item.gender}
+          Gender: <strong data-id="content">{item.gender}</strong>
         </p>
-        <p>Phone: {item.phone}</p>
         <p>
-          Address: {item.street}, {item.city}
+          Phone: <strong data-id="content">{item.phone}</strong>
+        </p>
+        <p>
+          Address: <strong data-id="content">{item.street}, {item.city}</strong>
         </p>
         <button
           className="ContactItemEdit"

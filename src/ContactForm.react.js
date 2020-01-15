@@ -36,7 +36,7 @@ export class ContactForm extends React.Component {
   renderInput = (name, label, value) => {
     return (
       <div className="ContactFormField">
-        <label>{name}</label>
+        <label data-id={`${name}-label`}>{name}</label>
         <input data-id={name} name={name} type="text" defaultValue={value} />
       </div>
     );
