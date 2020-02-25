@@ -12,6 +12,7 @@ export class ContactForm extends React.Component {
     return (
       <form
         className="ContactForm"
+        data-id="contact-form"
         onSubmit={this.onSave}
         ref={this.setFormRef}
       >

@@ -1,5 +1,6 @@
 import _ from 'underscore';
 import React from 'react';
+import {Counter} from './ContactCounter.react.js';
 
 import {ContactItem} from './ContactItem.react';
 
@@ -47,11 +48,12 @@ export class ContactList extends React.Component {
 
     return (
       <div className="ContactList">
+        <Counter/>
         <div className="ContactListSearch" key="search">
           <div className="hidden-div" data-id="hidden-div"></div>
           <div className="hidden-div" data-id="hidden-div"></div>
           <input onChange={this.onSearchChange} data-id="search" placeholder="Search" />
-          <button className="ContactListAdd" data-id="add" onClick={this.props.onAddClick}>
+          <button className="ContactListAdd" data-id="add-button" onClick={this.props.onAddClick}>
             Add
           </button>
         </div>
